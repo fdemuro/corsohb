@@ -1,4 +1,4 @@
-package it.consoftnformatica.corsoHibernate.test;
+package it.consoftnformatica.corsoHibernate.testConnessione;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;

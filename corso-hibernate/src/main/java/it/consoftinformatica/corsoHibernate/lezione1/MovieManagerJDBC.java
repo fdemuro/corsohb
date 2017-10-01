@@ -17,7 +17,7 @@ public class MovieManagerJDBC {
 	private String username = "federico";
 	private String password = "password";
 	private String url = "jdbc:mysql://localhost/corso_hibernate";
-	private String driverClass = "com.mysql.jdbc.Driver";
+	private String driverClass = "com.mysql.cj.jdbc.Driver";
 	private String tableSql = "create table MOVIES (ID integer not null, TITLE varchar(255), DIRECTOR varchar(255), SYNOPSIS varchar(255), primary key (ID))";
 	private String insertSql = "INSERT INTO MOVIES VALUES (?,?,?,?)";
 
@@ -87,7 +87,7 @@ public class MovieManagerJDBC {
 				m.setId(rs.getInt("ID"));
 				m.setTitle(rs.getString("TITLE"));
 				movies.add(m);
-				System.out.println("Movie Found: " + rs.getInt("ID") + ", Title:" + rs.getString("TITLE"));
+				System.out.println("Film trovato: " + rs.getInt("ID") + ", Titolo:" + rs.getString("TITLE"));
 			}
 
 		} catch (SQLException ex) {

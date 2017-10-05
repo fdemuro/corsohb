@@ -1,4 +1,4 @@
-package it.consoftinformatica.corsoHibernate.lezione1;
+package it.consoftinformatica.corsoHibernate;
 
 import java.util.List;
 
@@ -22,10 +22,15 @@ public class BasicMovieManager {
 	private void init() {
 
 		try {
+			// prima si può configurare anche BootstrapServiceRegistry...
 			StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
-					.configure("hibernate.cfg.xml").build();
-			Metadata metaData = new MetadataSources(standardRegistry).getMetadataBuilder().build();
-			sessionFactory = metaData.getSessionFactoryBuilder().build();
+					.configure("hibernate.cfg.xml")
+					.build();
+			Metadata metaData = new MetadataSources(standardRegistry)
+					.getMetadataBuilder()
+					.build();		
+			sessionFactory = metaData.getSessionFactoryBuilder()
+					.build();
 		} catch (Throwable th) {
 			System.err.println("Initial SessionFactory creation failed" + th);
 			throw new ExceptionInInitializerError(th);

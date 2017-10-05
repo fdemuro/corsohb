@@ -1,4 +1,4 @@
-package it.consoftinformatica.corsoHibernate.lezione1;
+package it.consoftinformatica.corsoHibernate;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
